@@ -13,7 +13,7 @@ export default class Modal {
 
   // abre ou fecha o modal
   toggleModal() {
-    this.containerModal.classList.toggle("ativo");
+    this.containerModal.classList.toggle('ativo');
   }
 
   // adiciona o evento de toggle ao modal
@@ -31,9 +31,9 @@ export default class Modal {
 
   // adiciona os eventos aos elementos do modal
   addModalEvents() {
-    this.botaoAbrir.addEventListener("click", this.eventToggleModal);
-    this.botaoFechar.addEventListener("click", this.eventToggleModal);
-    this.containerModal.addEventListener("click", this.cliqueForaModal);
+    this.botaoAbrir.addEventListener('click', this.eventToggleModal);
+    this.botaoFechar.addEventListener('click', this.eventToggleModal);
+    this.containerModal.addEventListener('click', this.cliqueForaModal);
   }
 
   init() {

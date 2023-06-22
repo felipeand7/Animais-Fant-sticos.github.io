@@ -1,4 +1,4 @@
-import debounce from "./debounce.js";
+import debounce from './debounce.js';
 
 export default class ScrollAnima {
   constructor(sections) {
@@ -25,9 +25,9 @@ export default class ScrollAnima {
   checkDistance() {
     this.distance.forEach((item) => {
       if (window.pageYOffset > item.offset) {
-        item.element.classList.add("ativo");
-      } else if (item.element.classList.contains("ativo")) {
-        item.element.classList.remove("ativo");
+        item.element.classList.add('ativo');
+      } else if (item.element.classList.contains('ativo')) {
+        item.element.classList.remove('ativo');
       }
     });
   }
@@ -36,13 +36,13 @@ export default class ScrollAnima {
     if (this.sections.length) {
       this.getDistance();
       this.checkDistance();
-      window.addEventListener("scroll", this.checkDistance);
+      window.addEventListener('scroll', this.checkDistance);
     }
     return this;
   }
 
   // Remove o event de scroll
   stop() {
-    window.removeEventListener("scroll", this.checkDistance);
+    window.removeEventListener('scroll', this.checkDistance);
   }
 }
